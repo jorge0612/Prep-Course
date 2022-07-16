@@ -127,12 +127,13 @@ function esEntero(numero) {
   // De lo contrario, devuelve "false"
   // Pista: Puedes resolver esto usando `Math.floor`
   // Tu código:
- if (Math.floor(numero % 1 === 0 )){
+ if (numero % 1 === 0){
   return true
  }
-else if (Math.floor(numero % 1 === 2)) {
-  return true;
+else   {
+  return false;
 }
+ 
 }
 
 function fizzBuzz(numero) {
@@ -140,6 +141,18 @@ function fizzBuzz(numero) {
   // Si "numero" es divisible entre 5, devuelve "buzz"
   // Si "numero" es divisible entre 3 y 5 (ambos), devuelve "fizzbuzz"
   // De lo contrario, devuelve el numero
+if (numero % 15 === 0){
+  return "fizzbuzz";
+}
+if (numero % 5 === 0){
+  return "buzz";
+}
+if (numero % 3 === 0){
+  return "fizz";
+}
+else {
+  return numero;
+}
 }
 
 function operadoresLogicos(num1, num2, num3) {
@@ -149,6 +162,21 @@ function operadoresLogicos(num1, num2, num3) {
   //Si num3 es más grande que num1 y num2, aumentar su valor en 1 y retornar el nuevo valor.
   //0 no es ni positivo ni negativo. Si alguno de los argumentos es 0, retornar "Error".
   //Si no se cumplen ninguna de las condiciones anteriores, retornar false. 
+if  ( num1 < 0 || num2 < 0 || num3 < 0){
+  return "Hay negativos";  
+}
+else if ( num1 === 0 || num2 === 0 || num3 === 0){
+  return "Error";
+}
+else if ( num3 > num1 && num3 > num2 ){
+  return (num3 +1);
+}
+else if (num1 > num2 && num1 > num3 && num1 > 0){
+  return "Número 1 es mayor y positivo";
+}
+else {
+  return false;
+}
 }
 
 function esPrimo(numero) {
@@ -157,7 +185,20 @@ function esPrimo(numero) {
   // Pista: un número primo solo es divisible por sí mismo y por 1
   // Pista 2: Puedes resolverlo usando un bucle `for`
   // Nota: Los números 0 y 1 NO son considerados números primos
+if (numero < 2)
+return false;
+  for ( var i = 2; i < numero; i++){
+  if (numero & i === 0){
+    return false;
+  }
 }
+ return true;
+}
+ 
+  
+  
+
+
 
 function esVerdadero(valor){
   //Escribe una función que reciba un valor booleano y retorne “Soy verdadero” 
