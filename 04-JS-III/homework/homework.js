@@ -67,28 +67,39 @@ function arrayContiene(array, elemento) {
   // Comprueba si el elemento existe dentro de "array"
   // Devuelve "true" si está, o "false" si no está
   // Tu código:
-for ( var i = 0; i< array.length; i++){
+for ( var i = 0; i < array.length; i++){
 if (array [i] === elemento){
   return true;
 }
-else {
-  return false;
-  
+} 
+  return false;  
 }
-}
-}
+
+
 
 function agregarNumeros(numeros) {
   // "numeros" debe ser un arreglo de enteros (int/integers)
   // Suma todos los enteros y devuelve el valor
   // Tu código:
-}
+var suma = 0;
+  for ( var i =0; i < numeros.length; i++){
+   suma = suma + numeros[i]
+  }
+   return suma;
+  }
+
 
 
 function promedioResultadosTest(resultadosTest) {
   // "resultadosTest" debe ser una matriz de enteros (int/integers)
   // Itera (en un bucle) los elementos del array, calcula y devuelve el promedio de puntajes
   // Tu código:
+  var suma = 0;
+  for (var i= 0; i < resultadosTest.length; i++){
+    suma = suma + resultadosTest[i]
+    promedio = suma / resultadosTest.length;
+  }
+  return promedio;
 }
 
 
